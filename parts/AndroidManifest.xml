@@ -72,6 +72,11 @@
             android:permission="FodService">
         </service>
 
+        <service
+            android:name=".fpsinfo.FPSInfoService"
+            android:exported="false">
+        </service>
+
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
