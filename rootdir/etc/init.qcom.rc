@@ -359,3 +359,7 @@ service vendor.power-hal /vendor/bin/hw/android.hardware.power-service-qti
 on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.qcom-post-boot
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
