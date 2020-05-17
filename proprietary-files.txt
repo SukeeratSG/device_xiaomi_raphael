@@ -9,6 +9,17 @@ vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/li
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
+# Camera (popup custom sound effects)
+media/audio/ui/popup_imperial_march_down.ogg|fcee239fad64840c09b381335f86048cacc54832
+media/audio/ui/popup_imperial_march_up.ogg|584f94b79ce7b13a5f29d618ac35f949773625c9
+media/audio/ui/popup_lightsaber_down.ogg|6a3fa079443ff8b663b2294ac54a558263b935e2
+media/audio/ui/popup_lightsaber_up.ogg|18f78fc7bc485c3f233b496e7c4876625f03aab6
+media/audio/ui/popup_throne_room_down.ogg|0a250fbad938fb64cdf1d19220bf02e50811ffec
+media/audio/ui/popup_throne_room_up.ogg|e52d7c2a15f899a02ae02184a31ffe89f6bc167c
+
+# Charger
+vendor/bin/hvdcp_opti
+
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
 etc/cne/Nexus/ROW/ROW_profiles.xml
