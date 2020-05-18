@@ -32,4 +32,7 @@
 
     <dimen name="keyguard_carrier_text_margin">44px</dimen>
 
+    <!-- the padding on the start and the end of the statusbar -->
+    <dimen name="status_bar_extra_padding">4dp</dimen>
+
 </resources>
