@@ -1,13 +1,14 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019 The Project Bliss
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Bliss stuff.
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1440
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Xiaomi
