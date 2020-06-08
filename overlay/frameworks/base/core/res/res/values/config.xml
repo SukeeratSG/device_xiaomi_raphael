@@ -394,5 +394,15 @@
 
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
+    
+    <!-- SystemInfo Sys Nodes -->
+    <bool name="config_deviceSupportSysInfo">true</bool>
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>  
+    
 </resources>
 
