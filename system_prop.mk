@@ -106,7 +106,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Vendor
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.va_aosp.support=1
-
-# Device Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.bliss.maintainer=Taran107
