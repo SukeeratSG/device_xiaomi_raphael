@@ -458,6 +458,9 @@
 
     <!-- FOD Icon Dimming -->
     <bool name="config_targetUsesInKernelDimming">false</bool>
+
+    <!-- Vowifi -->
+    <bool name="config_hasVowifi">true</bool>
     
 </resources>
 
