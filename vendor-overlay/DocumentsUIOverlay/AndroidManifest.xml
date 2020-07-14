@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.miui.documentsuioverlay" platformBuildVersionCode="1" platformBuildVersionName="1">
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29"/>
+    <overlay android:priority="1" android:targetPackage="com.google.android.documentsui" android:targetName="DocumentsUICustomization"/>
+</manifest>

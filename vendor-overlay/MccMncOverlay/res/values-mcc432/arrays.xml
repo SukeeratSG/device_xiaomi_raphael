@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="data_type_name_mcc_key">
+        <item>7</item>
+    </array>
+    <array name="data_type_name_mcc_value">
+        <item>4.5G</item>
+    </array>
+</resources>

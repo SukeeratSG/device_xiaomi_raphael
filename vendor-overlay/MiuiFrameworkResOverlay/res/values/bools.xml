@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_automatic_brightness_usetouch">true</bool>
+    <bool name="config_brightness_useprox">true</bool>
+    <bool name="config_displayFeatureCallbackSupported">true</bool>
+    <bool name="config_nightLightAdjSupported">true</bool>
+    <bool name="config_wait_for_autobrightness">false</bool>
+    <bool name="support_video_hdr_mode">true</bool>
+</resources>

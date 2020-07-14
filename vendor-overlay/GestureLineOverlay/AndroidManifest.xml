@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.android.systemui.gesture.line.overlay" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <application android:extractNativeLibs="false"/>
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29"/>
+    <overlay android:priority="2" android:targetPackage="android"/>
+</manifest>
