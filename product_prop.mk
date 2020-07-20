@@ -20,3 +20,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Priv-app permission
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
+# Audio
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.a2dp_offload.supported=false \
+    persist.bluetooth.a2dp_offload.disabled=true \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
+    persist.vendor.qcom.bluetooth.enable.splita2d=false \
+    vendor.audio.feature.a2dp_offload.enable = false
