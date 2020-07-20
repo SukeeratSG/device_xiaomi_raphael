@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_raphael.mk
+    $(LOCAL_DIR)/ancient_raphael.mk

@@ -12,5 +12,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="bliss_maintainer">Taran</string>
+    <string name="stag_maintainer">Sukeerat</string>
 </resources>
