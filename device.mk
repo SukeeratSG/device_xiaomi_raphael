@@ -24,8 +24,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-ancient \
-
+    $(LOCAL_PATH)/overlay-ancient 
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -56,6 +55,9 @@ PRODUCT_PACKAGES += \
 
 
 # Camera
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
 PRODUCT_PACKAGES += \
     Snap
 
@@ -116,7 +118,7 @@ PRODUCT_PACKAGES += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
+    lineage.livedisplay@2.0-service-sdm 
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -133,6 +135,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/org.codeaurora.snapcam.xml:system/etc/permissions/org.codeaurora.snapcam.xml
 
 # Power
 PRODUCT_PACKAGES += \
