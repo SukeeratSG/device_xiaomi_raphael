@@ -696,5 +696,9 @@
         <item>265</item>
     </integer-array>
     
+ <!-- Full screen aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">true</bool>
+
+
 </resources>
 
