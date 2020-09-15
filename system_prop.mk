@@ -121,4 +121,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Recorder 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.voicerec=true
-
