@@ -132,16 +132,6 @@
         <item>popup_throne_room_down.ogg</item>
     </string-array>
 
-    <string-array name="popupcamera_effects_entries">
-        <item>@string/action_none</item>
-        <item>@string/popup_title_muqin</item>
-        <item>@string/popup_title_yingyan</item>
-        <item>@string/popup_title_mofa</item>
-        <item>@string/popup_title_jijia</item>
-        <item>@string/popup_title_chilun</item>
-        <item>@string/popup_title_cangmen</item>
-    </string-array>
-
     <string-array name="popupcamera_effects_values">
         <item>-1</item>
         <item>0</item>
