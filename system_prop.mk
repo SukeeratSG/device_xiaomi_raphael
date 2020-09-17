@@ -116,4 +116,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.volte.dan_support=true \
     persist.rcs.supported=1 
 
+# Recorder 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.fluence.voicerec=true
 
