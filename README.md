@@ -22,4 +22,4 @@ Camera  | Main 48 MP f/1.8, telephoto lens, ultrawide lens, dual-LED (dual tone)
 ## Device picture
 
 ![Xiaomi Mi 9T/Redmi K20 Pro](https://i01.appmifile.com/webfile/globalimg/products/pc/redmik20/index_slider_1.png "Xiaomi Mi 9T/Redmi K20 Pro in carbon black")
-[![Visits Badge](https://badges.pufler.dev/visits/SukeeratSG/device_xiaomi_raphael)](https://badges.pufler.dev)
+
