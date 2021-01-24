@@ -14,6 +14,9 @@
      limitations under the License.
 -->
 <resources>
+	<!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+
     <!-- Color of the FOD view -->
     <color name="config_fodColor">#00ffffff</color>
 
