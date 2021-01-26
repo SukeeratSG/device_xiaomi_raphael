@@ -1,7 +1,3 @@
-on boot
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0666 /sys/class/power_supply/battery/input_suspend
-
 on post-fs-data
     mount none /vendor/etc/audio/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     write /sys/class/drm/card0-DSI-1/dim_layer_enable 1
