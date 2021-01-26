@@ -55,9 +55,6 @@
     <!-- Whether device has screen with higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
-    <!-- Whether the device supports Smart Pixels -->
-    <bool name="config_enableSmartPixels">true</bool>
-
     <!-- Enable face auth when swiping security view -->
     <bool name="config_faceAuthOnSecurityView">true</bool>
 </resources>
