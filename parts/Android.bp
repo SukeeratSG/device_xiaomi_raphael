@@ -7,9 +7,7 @@
 android_app {
     name: "XiaomiParts",
 
-    srcs: [
-        "src/**/*.java",
-    ],
+    srcs: ["src/**/*.java"],
 
     certificate: "platform",
     platform_apis: true,
@@ -24,8 +22,7 @@ android_app {
     ],
 
     optimize: {
-        proguard_flags_files: [
-            "proguard.flags",
-        ],
+        proguard_flags_files: ["proguard.flags"],
     },
+
 }

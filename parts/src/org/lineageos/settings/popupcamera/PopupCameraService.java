@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2020-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.hardware.camera2.CameraManager;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Handler;
 import android.os.IBinder;
@@ -68,9 +67,9 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private boolean mMotorCalibrating = false;
     private boolean mErrorDialogShowing;
     private final Object mLock = new Object();
+    private PopupCameraPreferences mPopupCameraPreferences;
     private SensorManager mSensorManager;
     private Sensor mFreeFallSensor;
-    private PopupCameraPreferences mPopupCameraPreferences;
     private SoundPool mSoundPool;
 
     private boolean mLedBusy = false;
@@ -162,7 +161,6 @@ public class PopupCameraService extends Service implements Handler.Callback {
                                         .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
                                         .build())
                         .build();
-
         String[] soundNames = getResources().getStringArray(R.array.popupcamera_effects_names);
         mSounds = new int[soundNames.length];
         for (int i = 0; i < soundNames.length; i++) {
@@ -419,11 +417,6 @@ public class PopupCameraService extends Service implements Handler.Callback {
     }
 
     private void playSoundEffect(String state) {
-        AudioManager audioManager =
-                (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
-            return;
-        }
         int soundEffect = Integer.parseInt(mPopupCameraPreferences.getSoundEffect());
         if (soundEffect != -1) {
             if (state.equals(Constants.CLOSE_CAMERA_STATE)) {
