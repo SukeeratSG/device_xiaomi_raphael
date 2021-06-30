@@ -16,13 +16,13 @@
 
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common Octavi-OS stuff.
+# Inherit some common lineage-OS stuff.
 
-$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 
-PRODUCT_NAME := octavi_raphael
+PRODUCT_NAME := lineage_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
@@ -33,10 +33,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# OctaviOS stuff
+# lineageOS stuff
 
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
 TARGET_WANTS_FOD_ANIMATIONS := true
-OCTAVI_BUILD_TYPE := Official
-OCTAVI_DEVICE_MAINTAINER := SPS-Iron
+lineage_BUILD_TYPE := Official
+lineage_DEVICE_MAINTAINER := SPS-Iron
