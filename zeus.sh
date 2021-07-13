@@ -69,6 +69,7 @@ export CCACHE_DIR=${ccache_location}
 ccache -M 75G
 
 source build/envsetup.sh
+export SELINUX_IGNORE_NEVERALLOWS=true
 
 if [ "$with_gapps" = "yes" ];
 then
