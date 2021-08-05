@@ -1,4 +1,4 @@
-/*
+11/*
  * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,21 +61,18 @@ void load_raphaelglobal() {
     property_override("ro.product.model", "Mi 9T Pro");
     property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
-    property_override("ro.build.description", "coral-user 11 RQ1A.210105.003 7005429 release-keys");
 }
 
 void load_raphaelin() {
     property_override("ro.product.model", "Redmi K20 Pro");
     property_override("ro.build.product", "raphaelin");
     property_override("ro.product.device", "raphaelin");
-    property_override("ro.build.description", "coral-user 11 RQ1A.210105.003 7005429 release-keys");
 }
 
 void load_raphael() {
     property_override("ro.product.model", "Redmi K20 Pro");
     property_override("ro.build.product", "raphael");
     property_override("ro.product.device", "raphael");
-    property_override("ro.build.description", "coral-user 11 RQ1A.210105.003 7005429 release-keys");
 }
 
 
@@ -91,6 +88,6 @@ void vendor_load_properties() {
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
-    property_override("ro.build.fingerprint", "google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys");
+    property_override("ro.build.fingerprint", "Xiaomi/raphael/raphael:11/RKQ1.200826.002/21.7.28:user/release-keys");
     load_dalvik_properties();
 }
