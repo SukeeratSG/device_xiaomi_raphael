@@ -587,3 +587,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay
+
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
