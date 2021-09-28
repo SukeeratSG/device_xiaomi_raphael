@@ -300,6 +300,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -582,3 +583,7 @@ PRODUCT_COPY_FILES += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# IMS
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay
