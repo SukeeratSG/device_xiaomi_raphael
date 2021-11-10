@@ -121,12 +121,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
-
-# Havoc
-
-PRODUCT_PROPERTY_OVERRIDES += \
-
-	ro.havoc.device.name=Redmi K20 Pro \
-	ro.havoc.group.url=https://t.me/havoc_raphael \
-	ro.havoc.maintainer=Sukeerat Singh \ 
-	ro.havoc.maintainer.username=Irongfly
