@@ -12,6 +12,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- SparkOS maintainer -->
-    <string name="spark_maintainer">Naveen Johnson</string>
+    <!--Arcana  maintainer -->
+    <string name="aosp_maintainer">Sukeerat Singh Goindi (Irongfly)</string>
 </resources>

@@ -1,0 +1,26 @@
+[
+    {
+		"remote": "github",
+		"repository": "SukeeratSG/raphael_kernel",
+		"target_path": "kernel/xiaomi/raphael",
+		"branch": "arcana"
+	},
+	{
+		"remote": "github",
+		"repository": "SukeeratSG/raphael_vendor",
+		"target_path": "vendor/xiaomi/raphael",
+		"branch": "12"
+	},
+	{
+		"remote": "github",
+		"repository": "SukeeratSG/android_device_xiaomi_extras",
+		"target_path": "device/xiaomi/extras",
+		"branch": "arcana"
+	},
+	{
+		"remote": "gitlab",
+		"repository": "varunhardgamer/trb_clang.git",
+		"target_path": "prebuilts/clang/host/linux-x86/trb_clang",
+		"branch": "14 "
+	}
+]

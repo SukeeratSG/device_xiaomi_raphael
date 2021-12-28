@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
+# Inherit
 $(call inherit-product, device/xiaomi/raphael/device.mk)
-
-$(call inherit-product, vendor/spark/config/common_full_phone.mk)
-
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := spark_raphael
+
+PRODUCT_NAME := aosp_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
@@ -32,5 +29,21 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# SparkOS stuff
-SPARK_BUILD_TYPE := Official
+# Flags for prebuilts
+
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
+EXTRA_FOD_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Arcana stuff
+
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+PREBUILT_LAWNCHAIR := false
+ARCANA_MAINTAINER := Irongfly
+ARCANA_DEVICE := raphael
+COPY_APN_SYSTEM := true
+ARCANA_OFFICIAL := true
