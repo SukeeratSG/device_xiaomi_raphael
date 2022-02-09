@@ -130,7 +130,7 @@ case "$target" in
 	echo 15 > /proc/sys/kernel/sched_group_downmigrate
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
-	echo 30 > /proc/sys/kernel/sched_min_task_util_for_colocation 
+	echo 30 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
 	# cpuset parameters
 	echo 0-2 > /dev/cpuset/background/cpus
@@ -138,42 +138,62 @@ case "$target" in
 	echo 4-7 > /dev/cpuset/foreground/boost/cpus
 	echo 0-2,4-7 > /dev/cpuset/foreground/cpus
 	echo 0-7 > /dev/cpuset/top-app/cpus
-        echo 0-3 > /dev/cpuset/restricted/cpus
+  echo 0-3 > /dev/cpuset/restricted/cpus
+  echo 1-2 > /dev/cpuset/audio-app/cpus
+
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
 
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-        echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+	echo 100 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+  echo 20 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 	echo 1209600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 	echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
-        echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+	echo 200 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+  echo 50 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
-        echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
+	echo 200 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+  echo 50 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
 	# configure input boost settings
 	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-	echo 500 > /sys/module/cpu_boost/parameters/input_boost_ms
-        echo "0:0 1:0 2:0 3:0 4:2323200 5:0 6:0 7:2323200" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
-        echo 400 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
+	echo 200 > /sys/module/cpu_boost/parameters/input_boost_ms
+  echo "0:0 1:0 2:0 3:0 4:2323200 5:0 6:0 7:2323200" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
+  echo 300 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
+
+  # test
+  echo "1" > /sys/devices/system/cpu/cpuidle/use_deepest_state
+  #echo "1000000" > /dev/cpuctl/cpu.rt_period_us
+  #echo "950000" > /dev/cpuctl/cpu.rt_period_us
+  #echo "0" > /sys/module/lpm_levels/parameters/sleep_disabled
+  # A few virtual memory tweaks for improved battery life;
+  echo "500" > /proc/sys/vm/dirty_expire_centisecs
+  echo "3000" > /proc/sys/vm/dirty_writeback_centisecs
+  #echo "5" > /proc/sys/vm/laptop_mode
+  #echo "0" > /proc/sys/vm/oom_dump_tasks
+  #echo "1" > /proc/sys/vm/oom_kill_allocating_task
+  #echo "0" > /proc/sys/vm/reap_mem_on_sigkill
+  echo "1200" > /proc/sys/vm/stat_interval
+  echo "0" > /proc/sys/vm/vfs_cache_pressure
+
+
+
 
 	# Disable wsf, beacause we are using efk.
 	# wsf Range : 1..1000 So set to bare minimum value 1.
-        echo 1 > /proc/sys/vm/watermark_scale_factor
+  echo 1 > /proc/sys/vm/watermark_scale_factor
 
         # Enable oom_reaper
 	if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
