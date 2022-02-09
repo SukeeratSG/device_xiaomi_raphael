@@ -201,6 +201,10 @@ USE_SENSOR_MULTI_HAL := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/xiaomi/raphael/sepolicy/sepolicy.mk
 
+# Library Check
+RELAX_USES_LIBRARY_CHECK := true
+
+
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
@@ -242,4 +246,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/xiaomi/raphael/BoardConfigVendor.mk
-
