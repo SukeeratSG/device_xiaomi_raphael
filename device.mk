@@ -586,3 +586,8 @@ PRODUCT_PACKAGES += \
 # APN
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
+
+# Preopt System Apps
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+	  SystemUI \
+	  Settings
