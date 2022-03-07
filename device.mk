@@ -300,7 +300,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -457,10 +456,6 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_raphael
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePkgs
 
 # Sensors
 PRODUCT_PACKAGES += \
