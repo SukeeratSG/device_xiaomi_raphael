@@ -17,6 +17,7 @@
  */
 -->
 
+
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 
@@ -607,4 +608,18 @@
 
     <!-- Exempt ImsService from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">org.codeaurora.ims</string>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
+
+     <!-- Pocket Lock -->
+    <bool name="config_pocketUseLightSensor">false</bool>
+
+    <!-- Statusbar Left-Right padding defaults -->
+    <integer name="config_statusbarPaddingStartDef">16</integer>
+    <integer name="config_statusbarPaddingEndDef">5</integer>
+
+    <!-- Night Light FOD -->
+    <bool name="disable_fod_night_light">true</bool>
+
 </resources>
