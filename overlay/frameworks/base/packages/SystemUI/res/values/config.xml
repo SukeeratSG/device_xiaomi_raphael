@@ -84,10 +84,10 @@
             0 - GLOBAL HBM
             1 - LOCAL HBM
     -->
-    <integer name="config_udfps_hbm_type">0</integer>
+    <integer name="config_udfpsHbmType">0</integer>
 
     <!-- Udfps vendor code -->
-    <integer name="config_udfps_vendor_code">22</integer>
+    <integer name="config_udfpsVendorCode">22</integer>
 
     <!-- The battery current divider, some kernel report current value in mA other in µA.
          Leave 1 if you have mA, put 1000 if you have µA-->
