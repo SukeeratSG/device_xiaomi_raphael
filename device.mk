@@ -283,10 +283,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
 
-# FirefoxLite
-PRODUCT_PACKAGES += \
-    FirefoxLite
-
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
 
